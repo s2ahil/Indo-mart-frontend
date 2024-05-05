@@ -63,7 +63,7 @@ const Signup = () => {
                 <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">Sign Up</button>
             </form>
             <div className='mt-4'>
-            <Link to="/customer/login" >Already have a account  click here ?</Link>
+            <Link to="/customer/login" className="text-blue-500">Already have a account  click here ?</Link>
             </div>
         </div>
     );
