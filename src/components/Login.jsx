@@ -54,7 +54,7 @@ const Login = () => {
                 <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">Login</button>
             </form>
             <div className='mt-4'>
-            <Link to="/customer/signup" >Dont have account click here ?</Link>
+            <Link to="/customer/signup" className="text-blue">Dont have account click here ?</Link>
             </div>
         </div>
     );
