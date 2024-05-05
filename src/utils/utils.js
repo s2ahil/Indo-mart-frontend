@@ -1,1 +1,1 @@
-export const BaseUrl="https://indo-mart-backend.onrender.com/"
+export const BaseUrl="https://indo-mart-backend.onrender.com"
