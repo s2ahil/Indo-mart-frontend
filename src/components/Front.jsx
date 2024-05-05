@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BaseUrl } from "../utils/utils.js";
 import { Link } from 'react-router-dom';
+
 const Front = () => {
+    const [loading, setLoading] = useState(true);
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -10,6 +12,7 @@ const Front = () => {
             try {
                 const response = await axios.get(`${BaseUrl}/products`);
                 setProducts(response.data);
+                setLoading(false); // Data fetched, set loading to false
             } catch (error) {
                 console.error('Error fetching products:', error);
             }
@@ -17,6 +20,10 @@ const Front = () => {
 
         fetchProducts();
     }, []);
+
+    if (loading) {
+        return <div>Loading...</div>; // Render loading screen while data is being fetched
+    }
 
     return (
         <div className='p-5'>
